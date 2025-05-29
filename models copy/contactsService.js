@@ -1,4 +1,4 @@
-const Contact = require("./contact.js");
+const Contact = require('./contact.js');
 
 const listContacts = async () => {
   return await Contact.find();
@@ -17,7 +17,11 @@ const addContact = async (body) => {
 };
 
 const updateContact = async (contactId, body) => {
-  return await Contact.findByIdAndUpdate(contactId, body, { new: true });
+  return await Contact.findByIdAndUpdate(
+    contactId, 
+    body, 
+    { new: true }
+  );
 };
 
 const updateStatusContact = async (contactId, body) => {
